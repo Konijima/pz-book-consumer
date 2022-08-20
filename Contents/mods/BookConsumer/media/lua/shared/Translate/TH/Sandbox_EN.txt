@@ -1,0 +1,20 @@
+Sandbox_TH = {
+
+    Sandbox_BookConsumer = "ผู้บริโภคหนังสือ",
+
+    Sandbox_BookConsumer_disabled = "ปิดการใช้งาน",
+    Sandbox_BookConsumer_disabled_tooltip = "ปิดการใช้งานคุณสมบัติของม็อดนี้ทั้งหมด",
+
+    Sandbox_BookConsumer_allowReadWalking = "เดินอ่านหนังสือ",
+    Sandbox_BookConsumer_allowReadWalking_tooltip = "อนุญาตให้ผู้เล่นสามารถอ่านหนังสือขณะกำลังเดินอยู่ได้",
+
+    Sandbox_BookConsumer_consumeLiterature = "กินหนังสือ",
+    Sandbox_BookConsumer_consumeLiterature_tooltip = "กินหนังสือเมื่ออ่านจบ ทำให้หนังสือเล่มนั้นหายไป",
+    
+    Sandbox_BookConsumer_skillBookXp = "หนังสือมอบค่า XP",
+    Sandbox_BookConsumer_skillBookXp_tooltip = "หนังสือจะช่วยมอบค่าประสบการณ์แทนการคูณค่าประสบการณ์",
+    
+    Sandbox_BookConsumer_skillBookXpMultiplier = "ตัวคูณค่า XP จากหนังสือ",
+    Sandbox_BookConsumer_skillBookXpMultiplier_tooltip = "คูณค่าประสบการณ์ที่ได้รับต่อการอ่านเป็นเปอร์เซ็นต์",
+
+}
