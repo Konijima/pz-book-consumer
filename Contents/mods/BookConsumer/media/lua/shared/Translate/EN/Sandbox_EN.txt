@@ -1,0 +1,20 @@
+Sandbox_EN = {
+
+    Sandbox_BookConsumer = "Book Consumer",
+
+    Sandbox_BookConsumer_disabled = "Disabled",
+    Sandbox_BookConsumer_disabled_tooltip = "Disable all features",
+
+    Sandbox_BookConsumer_allowReadWalking = "Allow Read Walking",
+    Sandbox_BookConsumer_allowReadWalking_tooltip = "Allow players to walk while reading.",
+
+    Sandbox_BookConsumer_consumeLiterature = "Consume Literature",
+    Sandbox_BookConsumer_consumeLiterature_tooltip = "Consume any literature when completed.",
+    
+    Sandbox_BookConsumer_skillBookXp = "Skill Books XP",
+    Sandbox_BookConsumer_skillBookXp_tooltip = "Skill Books give XP instead of XP Multiplier.",
+    
+    Sandbox_BookConsumer_skillBookXpMultiplier = "Skill Books XP Multiplier",
+    Sandbox_BookConsumer_skillBookXpMultiplier_tooltip = "Adjust the amount of XP given per every percent read.",
+
+}

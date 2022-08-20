@@ -1,0 +1,15 @@
+version=1
+id=2851424239
+title=Book Consumer
+description=[h1]Features/Sandbox Options[/h1]
+description=- Allow players to walk while reading.
+description=- Consume any literature when completed.
+description=- Skill Books give XP instead of XP Multiplier.
+description=- Adjust the amount of XP given per every percent read.
+description=- Don't consume book or magazine that you already read.
+description=- Should be highly compatible with other literacy mods.
+description=- Everything is configurable in the sandbox options.
+description=
+description=[h3]As requested by Klean[/h3]
+tags=Build 41;Balance;Literature;Misc;Multiplayer
+visibility=public
