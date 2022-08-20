@@ -1,4 +1,4 @@
-Sandbox_EN = {
+Sandbox_TH = {
 
     Sandbox_BookConsumer = "ผู้บริโภคหนังสือ",
 
