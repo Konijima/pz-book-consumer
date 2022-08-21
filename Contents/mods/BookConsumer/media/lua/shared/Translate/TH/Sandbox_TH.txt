@@ -11,10 +11,10 @@ Sandbox_TH = {
     Sandbox_BookConsumer_consumeLiterature = "กินหนังสือ",
     Sandbox_BookConsumer_consumeLiterature_tooltip = "กินหนังสือเมื่ออ่านจบ ทำให้หนังสือเล่มนั้นหายไป",
     
-    Sandbox_BookConsumer_levelPerBook = "หนังสือมอบระดับทักษะต่อเล่ม",
-    Sandbox_BookConsumer_levelPerBook_tooltip = "ระดับทักษะที่หนังสือมอบให้เมื่ออ่านหนังสือจนจบเล่ม (ต้องเปิดใช้งาน 'กินหนังสือ')",
+    Sandbox_BookConsumer_levelPerBook = "หนังสือมอบเลเวลทักษะต่อเล่ม",
+    Sandbox_BookConsumer_levelPerBook_tooltip = "เลเวลทักษะที่หนังสือมอบให้เมื่ออ่านหนังสือจนจบเล่ม (ต้องเปิดใช้งาน 'กินหนังสือ')",
     
-    Sandbox_BookConsumer_skillBookXpMultiplier = "คูณค่าประสบการณ์เพิ่มขึ้นต่อเล่ม",
-    Sandbox_BookConsumer_skillBookXpMultiplier_tooltip = "อัตราการคูณค่าประสบการณ์เมื่ออ่านหนังสือจนจบเล่ม (ต้องเปิดใช้งาน 'กินหนังสือ')",
+    Sandbox_BookConsumer_xpBoostPerBook = "คูณค่าประสบการณ์เพิ่มขึ้นต่อเล่ม",
+    Sandbox_BookConsumer_xpBoostPerBook_tooltip = "อัตราการคูณค่าประสบการณ์เมื่ออ่านหนังสือจนจบเล่ม (ต้องเปิดใช้งาน 'กินหนังสือ')",
 
 }
