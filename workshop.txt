@@ -37,7 +37,7 @@ description=For commission request contact me on Discord [b]Konijima#9279[/b]
 description=Donate on [url=https://www.paypal.com/paypalme/Konijima]PayPal[/url]
 description=Become a Patron on [url=https://www.patreon.com/Konijima]Patreon[/url]
 description=
-description=[h3]Github Repo[/h3]
+description=[h3]Github[/h3]
 description=https://github.com/Konijima/pz-book-consumer
 description=
 tags=Build 41;Balance;Literature;Misc;Multiplayer
