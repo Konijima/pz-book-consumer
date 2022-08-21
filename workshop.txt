@@ -28,6 +28,10 @@ description=- English
 description=- French
 description=- Thai
 description=
+description=[h3]Compatible Mods[/h3]
+description=- [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2822983942]Named Literature[/url]
+description=- [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2459061763]Better Literacy: A Literature Overhaul (Literacy Skill)[/url]
+description=
 description=[h3]Thanks to[/h3]
 description=- Mod development commissioned by [b]Klean[/b]
 description=- New poster & Thai translation by [b]Riko Prushka[/b]
