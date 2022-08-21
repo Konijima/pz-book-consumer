@@ -11,10 +11,10 @@ Sandbox_EN = {
     Sandbox_BookConsumer_consumeLiterature = "Consume Literature",
     Sandbox_BookConsumer_consumeLiterature_tooltip = "Consume any literature when completed.",
     
-    Sandbox_BookConsumer_skillBookXp = "Skill Books XP",
-    Sandbox_BookConsumer_skillBookXp_tooltip = "Skill Books give XP instead of XP Multiplier.",
-    
-    Sandbox_BookConsumer_skillBookXpMultiplier = "Skill Books XP Multiplier",
-    Sandbox_BookConsumer_skillBookXpMultiplier_tooltip = "Adjust the amount of XP given per every percent read.",
+    Sandbox_BookConsumer_levelPerBook = "Skill Level Up per Book",
+    Sandbox_BookConsumer_levelPerBook_tooltip = "How many level should a completed book gives. (Require 'Consume Literature' to be enabled)",
+
+    Sandbox_BookConsumer_xpBoostPerBook = "XP Boost per Book",
+    Sandbox_BookConsumer_xpBoostPerBook_tooltip = "How much XP Boost should a completed book gives. (Require 'Consume Literature' to be enabled)",
 
 }
