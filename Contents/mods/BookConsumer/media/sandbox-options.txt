@@ -21,18 +21,20 @@ option BookConsumer.consumeLiterature = {
 	translation = BookConsumer_consumeLiterature,
 }
 
-option BookConsumer.skillBookXp = {
-	type = boolean,
-	default = true,
+option BookConsumer.levelPerBook = {
+	type = integer,
+	default = 1,
+	min = 0,
+	max = 2,
 	page = BookConsumer,
-	translation = BookConsumer_skillBookXp,
+	translation = BookConsumer_levelPerBook,
 }
 
-option BookConsumer.skillBookXpMultiplier = {
-	type = double,
-	default = 6,
-	min = 0.01,
-	max = 1000000,
+option BookConsumer.xpBoostPerBook = {
+	type = integer,
+	default = 100,
+	min = 0,
+	max = 100,
 	page = BookConsumer,
-	translation = BookConsumer_skillBookXpMultiplier,
+	translation = BookConsumer_xpBoostPerBook,
 }

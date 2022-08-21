@@ -12,23 +12,7 @@
 
 local ISReadABook_checkMultiplier = ISReadABook.checkMultiplier
 function ISReadABook:checkMultiplier(...)
-    if not SandboxVars.BookConsumer.disabled and SandboxVars.BookConsumer.skillBookXp then
-        local trainedStuff = SkillBook[self.item:getSkillTrained()];
-        if trainedStuff then
-            local readPercent = (self.item:getAlreadyReadPages() / self.item:getNumberOfPages()) * 100;
-            if readPercent > 100 then readPercent = 100; end
-
-            local itemFullType = self.item:getFullType();
-            self.characterModData.BookConsumer = self.characterModData.BookConsumer or {};
-            self.characterModData.BookConsumer[itemFullType] = self.characterModData.BookConsumer[itemFullType] or 0;
-
-            local previousPercent = self.characterModData.BookConsumer[itemFullType]; -- get previous read percent
-            self.characterModData.BookConsumer[itemFullType] = readPercent; -- update current read percent
-
-            local diffPercent = readPercent - previousPercent;
-            self.character:getXp():AddXP(trainedStuff.perk, self.item:getLvlSkillTrained() * SandboxVars.BookConsumer.skillBookXpMultiplier * diffPercent);
-        end
-    else
+    if SandboxVars.BookConsumer.disabled or not SandboxVars.BookConsumer.consumeLiterature then
         return ISReadABook_checkMultiplier(self, ...);
     end
 end
@@ -58,6 +42,28 @@ local ISReadABook_perform = ISReadABook.perform;
 function ISReadABook:perform()
     ISReadABook_perform(self);
 
+    -- Add skill level and xp boost
+    if not SandboxVars.BookConsumer.disabled and SandboxVars.BookConsumer.consumeLiterature and SkillBook[self.item:getSkillTrained()] and not self.preCompleted then
+        local trainedStuff = SkillBook[self.item:getSkillTrained()];
+
+        -- Add skill levels
+        if SandboxVars.BookConsumer.levelPerBook > 0 then
+            for i = 1, SandboxVars.BookConsumer.levelPerBook do
+                self.character:LevelPerk(trainedStuff.perk, false);
+                self.character:getXp():setXPToLevel(trainedStuff.perk, self.character:getPerkLevel(trainedStuff.perk));
+                SyncXp(self.character);
+            end
+        end
+
+        -- Add skill xp boost
+        if SandboxVars.BookConsumer.xpBoostPerBook > 0 then
+            local multiplier = (math.floor(SandboxVars.BookConsumer.xpBoostPerBook/10) * (self.maxMultiplier/10));
+            if multiplier > self.character:getXp():getMultiplier(trainedStuff.perk) then
+                self.character:getXp():addXpMultiplier(trainedStuff.perk, multiplier, self.item:getLvlSkillTrained(), self.item:getMaxLevelTrained());
+            end
+        end
+    end
+
     -- Remove any literature if completed
     if not SandboxVars.BookConsumer.disabled and SandboxVars.BookConsumer.consumeLiterature then
         if self.item:getReplaceOnUse() then
@@ -79,7 +85,13 @@ function ISReadABook:new(character, item, ...)
     local o = ISReadABook_new(self, character, item, ...);
     o.stopOnWalk = not SandboxVars.BookConsumer.allowReadWalking; -- allow read and walk
     if SandboxVars.BookConsumer.disabled then o.stopOnWalk = true; end -- disable read and walk if mod is disabled
-    o.characterModData = character:getModData(); -- grab the character modData
+    -- o.characterModData = character:getModData(); -- grab the character modData
     o.preCompleted = item:getAlreadyReadPages() >= item:getNumberOfPages(); -- get if the book is already readed
+
+    --- Fix instant action for admin/debug
+    if not SandboxVars.BookConsumer.disabled and character:isTimedActionInstant() then
+        o.maxTime = 50;
+    end
+
     return o;
 end
