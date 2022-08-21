@@ -34,7 +34,11 @@ description=- New poster & Thai translation by [b]Riko Prushka[/b]
 description=
 description=[h3]Support[/h3]
 description=For commission request contact me on Discord [b]Konijima#9279[/b]
-description=If you like what I do and want to support me you can donate on [url=https://www.paypal.com/paypalme/Konijima]PayPal[/url]
+description=Donate on [url=https://www.paypal.com/paypalme/Konijima]PayPal[/url]
+description=Become a Patron on [url=https://www.patreon.com/Konijima]Patreon[/url]
+description=
+description=[h3]Github Repo[/h3]
+description=https://github.com/Konijima/pz-book-consumer
 description=
 tags=Build 41;Balance;Literature;Misc;Multiplayer
 visibility=public
