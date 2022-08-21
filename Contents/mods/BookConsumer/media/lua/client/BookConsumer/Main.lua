@@ -48,16 +48,29 @@ function ISReadABook:perform()
 
         -- Add skill levels
         if SandboxVars.BookConsumer.levelPerBook > 0 then
-            for i = 1, SandboxVars.BookConsumer.levelPerBook do
-                self.character:LevelPerk(trainedStuff.perk, false);
-                self.character:getXp():setXPToLevel(trainedStuff.perk, self.character:getPerkLevel(trainedStuff.perk));
-                SyncXp(self.character);
+            --- If book is obsolete do not level up
+            if self.item:getMaxLevelTrained() < self.character:getPerkLevel(SkillBook[self.item:getSkillTrained()].perk) + 1 then
+                self.character:Say(getText("IGUI_PlayerText_BookObsolete"));
+            else
+                for i = 1, SandboxVars.BookConsumer.levelPerBook do
+                    self.character:LevelPerk(trainedStuff.perk, false);
+                    self.character:getXp():setXPToLevel(trainedStuff.perk, self.character:getPerkLevel(trainedStuff.perk));
+                    SyncXp(self.character);
+                end
             end
         end
 
         -- Add skill xp boost
         if SandboxVars.BookConsumer.xpBoostPerBook > 0 then
+            --- Get the multipler to add
             local multiplier = (math.floor(SandboxVars.BookConsumer.xpBoostPerBook/10) * (self.maxMultiplier/10));
+
+            --- If book is obsolete reduce multiplier gain by 25%
+            if self.item:getMaxLevelTrained() < self.character:getPerkLevel(SkillBook[self.item:getSkillTrained()].perk) + 1 then
+                multiplier = multiplier * 0.25;
+            end
+
+            --- Add final multipler
             if multiplier > self.character:getXp():getMultiplier(trainedStuff.perk) then
                 self.character:getXp():addXpMultiplier(trainedStuff.perk, multiplier, self.item:getLvlSkillTrained(), self.item:getMaxLevelTrained());
             end
