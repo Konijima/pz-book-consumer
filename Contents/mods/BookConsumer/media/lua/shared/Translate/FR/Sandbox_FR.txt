@@ -1,0 +1,20 @@
+Sandbox_FR = {
+
+    Sandbox_BookConsumer = "Book Consumer",
+
+    Sandbox_BookConsumer_disabled = "Désactiver",
+    Sandbox_BookConsumer_disabled_tooltip = "Désactiver toutes les fonctionnalités",
+
+    Sandbox_BookConsumer_allowReadWalking = "Autoriser la lecture à pied",
+    Sandbox_BookConsumer_allowReadWalking_tooltip = "Autoriser les joueurs à marcher tout en lisant.",
+
+    Sandbox_BookConsumer_consumeLiterature = "Consommer de la littérature",
+    Sandbox_BookConsumer_consumeLiterature_tooltip = "Consommez toute littérature une fois terminée.",
+    
+    Sandbox_BookConsumer_levelPerBook = "Augmentation du niveau de compétence par livre",
+    Sandbox_BookConsumer_levelPerBook_tooltip = "Combien de niveaux un livre terminé doit-il donner. (Nécessite l'activation de "Consommer la littérature")",
+
+    Sandbox_BookConsumer_xpBoostPerBook = "Boost d'expérience par livre",
+    Sandbox_BookConsumer_xpBoostPerBook_tooltip = "Combien de boost d'expérience un livre terminé devrait-il donner. (Nécessite l'activation de "Consommer la littérature")",
+
+}
