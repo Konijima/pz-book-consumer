@@ -85,7 +85,6 @@ function ISReadABook:new(character, item, ...)
     local o = ISReadABook_new(self, character, item, ...);
     o.stopOnWalk = not SandboxVars.BookConsumer.allowReadWalking; -- allow read and walk
     if SandboxVars.BookConsumer.disabled then o.stopOnWalk = true; end -- disable read and walk if mod is disabled
-    -- o.characterModData = character:getModData(); -- grab the character modData
     o.preCompleted = item:getAlreadyReadPages() >= item:getNumberOfPages(); -- get if the book is already readed
 
     --- Fix instant action for admin/debug
